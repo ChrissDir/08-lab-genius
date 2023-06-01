@@ -6,8 +6,6 @@ main{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url(imgs/Grandes-images/background-pc.webp);
-    max-width: 100vw;
     min-height: 100vh;
 }
 
@@ -19,6 +17,12 @@ h1{
     letter-spacing: 0.25rem;
     text-transform: uppercase;
     color: #FFFFFF;
+}
+
+.page-container{
+    background-image: url(imgs/Grandes-images/background-pc.webp);
+    width: min(100%, 116.25rem);
+    height: 100vh;
 }
 
 .container1{

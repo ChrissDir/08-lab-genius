@@ -24,6 +24,7 @@ h1{
     color: var(--color-full-white);
 }
 a{
+    text-decoration: none;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
@@ -52,6 +53,8 @@ h2{
     color: var(--color-full-white);
 }
 h3{
+    grid-column: 1 / -1;
+    text-align: center;
     margin: 0;
 }
 span{
@@ -69,20 +72,17 @@ span{
 .container1{
     width: min(100%, 116.25rem);
     max-height: fit-content;
-    padding-top: 9.625rem;
-    padding-left: 24.25rem;
 }
 .componentcont1{
     display: flex;
+    padding-top: 9.625rem;
+    padding-left: 24.25rem;
 }
 #texte-div1-cont1{
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
     color: var(--color-full-white);
-}
-#boutons-div1-cont1{
-
 }
 .div1cont1{
     max-width: 38.9375rem;
@@ -92,13 +92,15 @@ span{
 }
 .div3cont1{
     display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(1,1fr);
 }
-
 #clients{
     font-family: 'Roboto';
     font-weight: 400;
     font-size: .75rem;
     line-height: 1.9375rem;
+    margin-top: 12.75rem;
     text-align: center;
     letter-spacing: .1875rem;
     text-transform: uppercase;

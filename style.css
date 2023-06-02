@@ -1,4 +1,6 @@
 :root{
+    --color-red : #BB2323;
+    --color-orange :#F87F28;
     --color-full-white : #FFFFFF;
     --color-grey-dark : #BFBFBF;
     font-size: 100%;
@@ -6,26 +8,39 @@
 body{
     font-family: 'Inter', sans-serif;
     margin: 0;
+    background-color: #232323;
 }
-header{
-    display: inline-block;
+.componentdebut{
+    display: flex;
 }
-#flexend{
+.div1header{
+    display: flex;
+    justify-content: space-evenly;
+    min-width: 50%;
+}
+.div2header{
     display: flex;
     justify-content: flex-end;
-    align-items: flex-end;
+    align-items: center;
+    text-align: right;
+    max-width: 50%;
+}
+#olivheader{
+    font-family: 'Roboto';
+    font-weight: 900;
+    font-size: 2rem;
+    line-height: 2.25rem;
+    color: var(--color-full-white);
 }
 .paraheader{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
     font-family: 'Inter';
     font-weight: 400;
     font-size: 1rem;
     line-height: 1.5rem;
     color: var(--color-full-white);
-}
-.imgheader{
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 h1{
     font-family: 'Roboto', sans-serif;
@@ -44,16 +59,16 @@ a{
     font-weight: 400;
     font-size: .875rem;
     line-height: 1.5rem;
-    color: #F87F28;
+    color: var(--color-orange);
     padding: .75rem 2rem;
-    border: .125rem solid #F87F28;
+    border: .125rem solid var(--color-orange);
     border-radius: 3.125rem;
     box-sizing: border-box;
     margin: 0;
 }
 a:hover{
     color: var(--color-full-white);
-    background: #BB2323;
+    background: var(--color-red);
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
 }
 img {
@@ -80,7 +95,7 @@ h3{
     font-size: 4.5rem;
     line-height: 6.3125rem;
     letter-spacing: -0.0625rem;
-    color: #F87F28;
+    color: var(--color-orange);
 }
 .page-container{
     width: min(100%, 116.25rem);

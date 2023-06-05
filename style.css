@@ -6,6 +6,9 @@
     --color-black :#232323;
     font-size: 100%;
 }
+html{
+    margin: 0;
+}
 body{
     font-family: 'Inter', sans-serif;
     margin: 0;
@@ -14,7 +17,8 @@ body{
 main{
     display: flex;
     align-items: center;
-    justify-items: center;
+    justify-content: center;
+    height: 100vh;
 }
 .componentdebut{
     display: flex;
@@ -32,8 +36,10 @@ main{
     max-width: 50%;
 }
 #olivtop{
+    display: flex;
     font-family: 'Roboto';
     font-weight: 900;
+    align-items: center;
     font-size: 2rem;
     line-height: 2.25rem;
     color: var(--color-full-white);
@@ -42,7 +48,6 @@ main{
     display: flex;
     justify-content: center;
     align-items: center; 
-    font-family: 'Inter';
     font-weight: 400;
     font-size: 1rem;
     line-height: 1.5rem;
@@ -101,6 +106,9 @@ h2{
     color: var(--color-full-white);
 }
 h3{
+    margin: 0;
+}
+h4{
     margin: 0;
 }
 .olivier{
@@ -186,12 +194,54 @@ h3{
 #bethesda{
     grid-area: "bethesda";
 }
+#compétencescont2{
+    font-weight: 600;
+    font-size: 2.25rem;
+    line-height: 3.75rem;
+    text-transform: capitalize;
+    color: var(--color-full-white);
+}
+.styleparacont2{
+    font-weight: 400;
+    font-size: .875rem;
+    line-height: 1.5rem;
+    color: var(--color-full-white);
+}
+.styleh4cont2{
+    font-weight: 600;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.375rem;
+    color: var(--color-full-white);
+}
 .container2{
     display: grid;
-    background-image: url(imgs/Grandes-images/background-cont2.png);
+    background-image: url(imgs/Grandes-images/background-cont2.webp);
     width: min(100vw, 116.25rem);
+    grid-template-areas: 
+    "upcont2 upcont2 upcont2 upcont2"
+    "tech gdp manage langue";
 }
-
+.div1cont2{
+    justify-content: center;
+    grid-area: "upcont2";
+}
+.technique{
+    display: flex;
+    grid-area: "tech";
+}
+.gestion-de-projet{
+    display: flex;
+    grid-area: "gdp";
+}
+.management{
+    display: flex;
+    grid-area: "manage";
+}
+.langues{
+    display: flex;
+    grid-area: "langue";
+}
 @media screen and (max-width: 375px) {
     .page-container{
         padding: 1.375rem 1.875rem;

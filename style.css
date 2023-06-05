@@ -3,36 +3,42 @@
     --color-orange :#F87F28;
     --color-full-white : #FFFFFF;
     --color-grey-dark : #BFBFBF;
+    --color-black :#232323;
     font-size: 100%;
 }
 body{
     font-family: 'Inter', sans-serif;
     margin: 0;
-    background-color: #232323;
+    background-color: var(--color-black);
+}
+main{
+    display: flex;
+    align-items: center;
+    justify-items: center;
 }
 .componentdebut{
     display: flex;
+    padding-top: 1%;
 }
-.div1header{
+.div1top{
     display: flex;
     justify-content: space-evenly;
     min-width: 50%;
 }
-.div2header{
+.div2top{
     display: flex;
-    justify-content: flex-end;
     align-items: center;
-    text-align: right;
+    padding-left: 45%;
     max-width: 50%;
 }
-#olivheader{
+#olivtop{
     font-family: 'Roboto';
     font-weight: 900;
     font-size: 2rem;
     line-height: 2.25rem;
     color: var(--color-full-white);
 }
-.paraheader{
+.paratop{
     display: flex;
     justify-content: center;
     align-items: center; 
@@ -55,16 +61,15 @@ h1{
 a{
     text-decoration: none;
     font-family: 'Roboto';
-    font-style: normal;
     font-weight: 400;
     font-size: .875rem;
     line-height: 1.5rem;
-    color: var(--color-orange);
     padding: .75rem 2rem;
-    border: .125rem solid var(--color-orange);
+    color: var(--color-orange);
+    border: 0.125rem solid var(--color-orange);
     border-radius: 3.125rem;
     box-sizing: border-box;
-    margin: 0;
+    margin-right: 4%;
 }
 a:hover{
     color: var(--color-full-white);
@@ -74,9 +79,18 @@ a:hover{
 img {
     max-width: 100%;
     height: auto;
+    margin: 0;
   }
 p{
     margin: 0;
+}
+.barre-orange{
+    display: inline-block;
+    border: 2px solid var(--color-orange);
+    box-sizing: border-box;
+    width: 4.5625rem;
+    margin-top: .8125rem;
+    margin-bottom: 1.25rem;
 }
 h2{
     font-weight: 400;
@@ -103,39 +117,44 @@ h3{
 }
 .container1{
     display: grid;
-    background-image: url(/imgs/Grandes-images/background-cont1.webp);
-    width: min(100%, 116.25rem);
-    min-height: auto;
+    background-image: url(imgs/Grandes-images/background-cont1.webp);
+    width: min(100vw, 116.25rem);
 }
 .componentcont1{
     display: flex;
     box-sizing: border-box;
-    padding-top: 9%;
+    padding-top: 5%;
     padding-left: 21%;
 }
 #texte-div1-cont1{
     font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 1rem;
+    line-height: 1.5rem;
     color: var(--color-full-white);
+    padding-right: 30%;
+    margin-bottom: 5%;
+}
+#poste-div1-cont1{
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: var(--color-full-white);
+    padding-bottom: 13%;
 }
 .div1cont1{
     max-width: 38.9375rem;
 }
 .div2cont1{
-    justify-content: flex-end;
-    align-items: flex-end;
+    padding-left: 6%;
 }
 .div3cont1{
-    display: flex;
-    width: 70%;
+    display: grid;
+    width: 60%;
     align-items: center;
-    justify-content: center;
+    justify-items: center;
     margin: auto auto;
-    grid-template-columns: repeat(6, 1fr);
-    grid-gap: 10px;  
-    align-items: center;
-
+    grid-template-areas: "sega ubisoft microsoft electronic-arts capcom bethesda";
+    margin-bottom: 4.375rem;
 }
 #clients{
     display: inline-block;
@@ -143,15 +162,80 @@ h3{
     font-weight: 400;
     font-size: .75rem;
     line-height: 1.9375rem;
-    margin-top: 10%;
+    margin-top: 11.5%;
     text-align: center;
     letter-spacing: .1875rem;
     text-transform: uppercase;
     color: var(--color-grey-dark);
 }
+#sega{
+    grid-area: "sega";
+}
+#ubisoft{
+    grid-area: "ubisoft";
+}
+#microsoft{
+    grid-area: "microsoft";
+}
+#electronic-arts{
+    grid-area: "electronic-arts";
+}
+#capcom{
+    grid-area: "capcom";
+}
+#bethesda{
+    grid-area: "bethesda";
+}
 .container2{
     display: grid;
-    background-image: url(/imgs/Grandes-images/background-cont2.webp);
-    width: min(100%, 116.25rem);
-    min-height: auto;
+    background-image: url(imgs/Grandes-images/background-cont2.png);
+    width: min(100vw, 116.25rem);
+}
+
+@media screen and (max-width: 375px) {
+    .page-container{
+        padding: 1.375rem 1.875rem;
+    }
+    .container1{
+        background-image: none;
+    }
+    .paratop{
+        display: none;
+    }
+    #clients{
+       text-align: start; 
+    }
+    h1{
+        padding-top: 10%;
+    }
+    h2{
+    font-size: 2.5rem;
+    line-height: 6.3125rem;
+    letter-spacing: -0.1875rem;
+    }
+    .divcomponentdebut{
+        padding: 0;
+    }
+    .componentcont1{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+    }
+    .div1top{
+        justify-content: left;
+    }
+    .div2cont1{
+        display: none;
+    }
+    .div3cont1{
+        width: 100vw;
+        grid-template-areas: "sega ubisoft"
+                             "microsoft electronic-arts"
+                             "capcom bethesda";
+    }
+    #texte-div1-cont1{
+        max-width: 100vw;
+        padding-right: 12%;
+    }
 }

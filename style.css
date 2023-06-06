@@ -16,13 +16,14 @@ body{
 }
 main{
     display: flex;
+    width: min(100%, 116.25rem);
     align-items: center;
     justify-content: center;
     height: 100vh;
 }
 .page-container{
     width: min(100%, 116.25rem);
-    height: 100%;
+    height: min(100%, 408.5rem);
 }
 .componentdebut{
     display: flex;
@@ -92,6 +93,10 @@ img {
   }
 p{
     margin: 0;
+}
+ul{
+    list-style: none;
+    padding: 0;
 }
 .barre-orange{
     display: inline-block;
@@ -184,21 +189,20 @@ h4{
     background-image: url(imgs/Grandes-images/background-cont2.webp);
     width: min(100vw, 116.25rem);
 }
+.div1cont2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 21.875rem;
+    padding-left: 38%;
+    padding-top: 8.3%;
+    padding-bottom: 8.3%;
+}
 .compcont2{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    gap: 10px;
-    padding-left: 20vw;
-    padding-right: 20vw;
-}
-.div1cont2{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-top: 8%;
-    margin-bottom: 7.25rem;
 }
 .technique{
 
@@ -235,6 +239,9 @@ h4{
 @media screen and (max-width: 375px) {
     .page-container{
         padding: 1.375rem 1.875rem;
+    }
+    main{
+        display: block;
     }
     .container1{
         background-image: none;
@@ -278,10 +285,20 @@ h4{
         max-width: 100vw;
         padding-right: 12%;
     }
+    .componentdebut{
+        padding-top: 0;
+    }
     .container2{
         background-image: none;
     }
+    .div1cont2{
+        text-align: start;
+        align-items: start;
+        padding: 0;
+    }
     .compcont2{
+        padding-top: 2.5375rem;
+        align-items: start;
         flex-direction: column;
     }
 

@@ -20,6 +20,10 @@ main{
     justify-content: center;
     height: 100vh;
 }
+.page-container{
+    width: min(100%, 116.25rem);
+    height: 100%;
+}
 .componentdebut{
     display: flex;
     padding-top: 1%;
@@ -119,10 +123,6 @@ h4{
     letter-spacing: -0.0625rem;
     color: var(--color-orange);
 }
-.page-container{
-    width: min(100%, 116.25rem);
-    height: 100%;
-}
 .container1{
     display: grid;
     background-image: url(imgs/Grandes-images/background-cont1.webp);
@@ -176,23 +176,32 @@ h4{
     text-transform: uppercase;
     color: var(--color-grey-dark);
 }
-#sega{
-    grid-area: "sega";
+.container2{
+    display: grid;
+    background-image: url(imgs/Grandes-images/background-cont2.webp);
+    width: min(100vw, 116.25rem);
+    height: 93.75rem;
+    grid-template-columns: ;
+    grid-template-rows: ;
+    gap: .625rem;
 }
-#ubisoft{
-    grid-area: "ubisoft";
+.div1cont2{
+    justify-content: center;
+    grid-row-start: 1;
+    grid-column-start: 2;
+    grid-column-end: 4;
 }
-#microsoft{
-    grid-area: "microsoft";
+.technique{
+    grid-row-start: 2;
 }
-#electronic-arts{
-    grid-area: "electronic-arts";
+.gestion-de-projet{
+    grid-row-start: 2;
 }
-#capcom{
-    grid-area: "capcom";
+.management{
+    grid-row-start: 2;
 }
-#bethesda{
-    grid-area: "bethesda";
+.langues{
+    grid-row-start: 2;
 }
 #compétencescont2{
     font-weight: 600;
@@ -213,34 +222,6 @@ h4{
     font-size: 1rem;
     line-height: 1.375rem;
     color: var(--color-full-white);
-}
-.container2{
-    display: grid;
-    background-image: url(imgs/Grandes-images/background-cont2.webp);
-    width: min(100vw, 116.25rem);
-    grid-template-areas: 
-    "upcont2 upcont2 upcont2 upcont2"
-    "tech gdp manage langue";
-}
-.div1cont2{
-    justify-content: center;
-    grid-area: "upcont2";
-}
-.technique{
-    display: flex;
-    grid-area: "tech";
-}
-.gestion-de-projet{
-    display: flex;
-    grid-area: "gdp";
-}
-.management{
-    display: flex;
-    grid-area: "manage";
-}
-.langues{
-    display: flex;
-    grid-area: "langue";
 }
 @media screen and (max-width: 375px) {
     .page-container{

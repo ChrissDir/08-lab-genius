@@ -12,9 +12,8 @@
 }
 body{
     font-family: 'Inter', sans-serif;
-    margin: 0;
-    width: 100%;
-    height: 100%;
+    width: min(100vw, 1860px);
+    height: 100vh;
     background-color: var(--color-black);
 }
 main{
@@ -22,11 +21,12 @@ main{
     width: min(100%, 1860px);
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    flex-direction: column;
+    height: 100%;
 }
 .page-container{
-    width: min(100%, 1860px);
-    height: min(100%, 6536px);
+    width: 100%;
+    height: 100%;
 }
 .componentdebut{
     display: flex;
@@ -88,7 +88,7 @@ a:hover{
     background: var(--color-red);
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
 }
-img {
+img{
     max-width: 100%;
     height: auto;
   }
@@ -128,7 +128,8 @@ h4{
 .container1{
     display: grid;
     background-image: url(imgs/Grandes-images/background-cont1.webp);
-    width: min(100vw, 1860px);
+    width: min(100%, 1860px);
+    height: min(100%, 1087px);
 }
 .componentcont1{
     display: flex;
@@ -181,7 +182,7 @@ h4{
 }
 .container2{
     background-image: url(imgs/Grandes-images/background-cont2.webp);
-    width: min(100vw, 1860px);
+    width: min(100%, 1860px);
 }
 .div1cont2{
     display: flex;
@@ -199,7 +200,7 @@ h4{
     align-items: center;
     padding-bottom: 324px;
 }
-#titresh3{
+.titresh3{
     font-weight: 600;
     font-size: 2.25rem;
     line-height: 3.75rem;
@@ -221,65 +222,42 @@ h4{
 }
 .container3{
     background-image: url(imgs/Grandes-images/background-cont3.webp);
-    width: min(100vw, 1860px);
-    height: min(100vh, 916px);
+    width: min(100%, 1860px);
+    height: min(100%, 916px)
 }
 .comp1cont3{
     display: grid;
-    align-items: center;
-    justify-items: center;
-    width: max(60vw, 1140px);
-    height: max(60vh, 840px);
-    margin: auto auto;
-    grid-template-areas: "portfolio astronaute astronaute astronaute bureau"
-                         "portfolio peinture boite-eau boite-eau boite-eau"
-                         "portfolio mae mae orange-bleue orange-bleue";
-}
-.portfolio{
-    grid-row-start: 1;
-    grid-row-end: 3;
-    grid-column-start: 1;
-    grid-column-end: 1;
-}
-.astronaute{
-    grid-row-start: 1;
-    grid-row-end: 1;
-    grid-column-start: 2;
-    grid-column-end: 3;
-}
-.bureau{
-    grid-row-start: 1;
-    grid-row-end: 1;
-    grid-column-start: 5;
-    grid-column-end: 5;
-}
-.peinture{
-    grid-row-start: 2;
-    grid-row-end: 2;
-    grid-column-start: 2;
-    grid-column-end: 2;
-}
-.boite-eau{
-    grid-row-start: 2;
-    grid-row-end: 2;
-    grid-column-start: 3;
-    grid-column-end: 5;
-}
-.mae{
-    grid-row-start: 3;
-    grid-row-end: 3;
-    grid-column-start: 2;
-    grid-column-end: 3;
-}
-.orange-bleue{
-    grid-row-start: 3;
-    grid-row-end: 3;
-    grid-column-start: 4;
-    grid-column-end: 5;
+    align-items: start;
+    grid-template-areas: "portfolio compdroitecont3";
+    padding-bottom: 13.67%;
 }
 .compdroitecont3{
-    gap: 25px;
+    display: grid;
+    gap: 24px;
+    grid-template-areas: "i i i a"
+                         "u k k k"
+                         "c c b b";  
 }
+.astronaute{
+    grid-area: i;
+}
+.bureau{
+    grid-area: a;
+}
+.peinture{
+    grid-area: u;
+}
+.boite-eau{
+    grid-area: k;
+}
+.mae{
+    grid-area: c;
+}
+.orange-bleue{
+   grid-area: b;
+
+}
+
 @media screen and (max-width: 23.4375rem) {
     .page-container{
         padding: 22px 30px;
@@ -308,7 +286,7 @@ h4{
         padding: 0;
     }
     #clients{
-
+        margin-bottom: 22px;
     }
     .componentcont1{
         display: flex;
@@ -323,7 +301,8 @@ h4{
         display: none;
     }
     .div3cont1{
-        width: 100vw;
+        width: 100%;
+        margin-bottom: 0;
         grid-template-areas: "sega ubisoft"
                              "microsoft electronic-arts"
                              "capcom bethesda";
@@ -337,19 +316,34 @@ h4{
     }
     .container2{
         background-image: none;
+        padding-top: 19.2%;
     }
     .compcont2{
         gap: 38px;
+        padding-top: 40.6px;
+        padding-bottom: 49px;
+        align-items: start;
+        flex-direction: column;
     }
     .div1cont2{
         text-align: start;
         align-items: start;
         padding: 0;
     }
-    .compcont2{
-        padding-top: 40.6px;
-        align-items: start;
-        flex-direction: column;
+    .container3{
+        background-image: none;
     }
-
+    .comp1cont3{
+        grid-template-areas: "portfolio" 
+                             "compdroitecont3";
+    }
+    .compdroitecont3{
+        padding-top: 11%;
+        grid-template-areas: "i" 
+                             "a"
+                             "u" 
+                             "k"
+                             "c"
+                             "b"; 
+    } 
 }

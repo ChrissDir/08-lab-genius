@@ -1,3 +1,53 @@
+@font-face {
+    font-family: 'Inter';
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap; 
+    unicode-range: U+000-5FF; /* Ne charger que les glyphes utilisés*/
+    src:url('font/Inter-Regular.woff2') format('woff2'); 
+}
+@font-face {
+    font-family: "Inter";
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap; 
+    unicode-range: U+000-5FF;
+    src: url("font/Inter-Medium.woff2") format("truetype"); 
+
+}
+@font-face {
+    font-family: "Inter";
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap; 
+    unicode-range: U+000-5FF;
+    src: url("font/Inter-SemiBold.woff2") format("truetype"); 
+
+}
+@font-face {
+    font-family: "Inter";
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap; 
+    unicode-range: U+000-5FF;
+    src: url("font/Inter-Bold.woff2") format("truetype");
+}
+@font-face {
+    font-family: "Roboto";
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap; 
+    unicode-range: U+000-5FF;
+    src: url("font/Roboto-Regular.woff2") format("truetype");
+} 
+@font-face {
+    font-family: "Roboto";
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap; 
+    unicode-range: U+000-5FF;
+    src: url("font/Roboto-Black.woff2") format("truetype");
+}
 :root{
     --color-red : #BB2323;
     --color-orange :#F87F28;
@@ -397,7 +447,6 @@ h4{
     padding: 1.125rem 1.5625rem 1.125rem 1.4375rem;
     width: 18.6875rem;
 }
-
 .react{
     display: flex;
     align-items: center;
@@ -467,7 +516,6 @@ h4{
     color: var(--color-black);
     background: var(--color-orange);
     border-radius: 1.875rem;
-    row-gap: 200px;
 }
 #marginang{
     margin-left: 34%;
@@ -491,36 +539,117 @@ h4{
     margin-left: 59%;
 }
 .container6{
-    display: grid;
-    background-image: url(/imgs/Grandes-images/background-cont6.webp);
+    background-image: url(imgs/Grandes-images/background-cont6.webp);
+    background-repeat: no-repeat;
 }
 .compprincipalcont6{
+    display: grid;
+    padding: 4.375rem 31.9375rem 11.75rem 31.375rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+.comphautcont6{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 1;
     display: flex;
-    padding: 9.3125rem 31.9375rem 11.75rem 31.375rem;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
-.comphautcont6{
-    padding-bottom: 4.375rem;
-}
-.comphautcont6 > .barre-orange{
-    margin-left: 5rem;
-}
-.compbascont6{
-    display: inline-block;
-}
 .compbasgauchecont6{
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 2;
+    grid-row-end: 2;
     max-width: 7.6875rem;
-
+}
+.texte-italiquecont6{
+    font-style: italic;
+    font-weight: 400;
+    font-size: 1.3125rem;
+    line-height: 2.25rem;
+    color: var(--color-full-white);
+}
+#sg{
+    font-weight: 700;
+    font-size: 1.125rem;
+    line-height: 1.5625rem;
+    color: var(--color-full-white);
+}
+#caf{
+    font-weight: 400;
+    font-size: .9375rem;
+    line-height: 1.375rem;
+    letter-spacing: .0313rem;
+    color: var(--color-full-white);
 }
 .compbasdroitecont6{
-
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    width: 677px;
 }
-@media screen and (max-width: 23.4375rem) {
+.compbasdroitecont6 > .barre-orange{
+    width: 39px;
+}
+.container7{
+    background-image: url(imgs/Grandes-images/background-cont7.webp);
+    background-repeat: no-repeat;
+    background-position-x: center;
+}
+.compcont7{
+    display: flex;
+    padding: 6.8125rem 39.875rem 11.875rem 23.9375rem;
+    gap: 5.75rem;
+}
+.divgauchecont7{
+    order: 1;
+}
+.divgauchecont7 > h4{
+   padding-top: 0;
+}
+.divdroitetexteorange{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: .75rem;
+    line-height: 1.0625rem;
+    letter-spacing: .125rem;
+    text-transform: uppercase;
+    color: var(--color-orange);
+}
+.h4cont7{
+    font-weight: 700;
+    font-size: 1.125rem;
+    line-height: 1.625rem;
+    padding-top: .3125rem;
+    padding-bottom: .75rem;
+    text-transform: capitalize;
+    color: var(--color-full-white);
+}
+.paracont7{
+    padding-bottom: 2.4375rem;
+    padding-right: 62px;
+}
+.divdroitecont7{
+    padding-top: 2%;
+    order: 2;
+}
+#spancont7{
+    display: inline-block;
+}
+.container8{
+    background-image: url(imgs/Grandes-images/background-cont8.webp);
+    background-repeat: no-repeat;
+    background-position-x: center;
+}
+@media screen and (max-width: 375px) {
     .page-container{
         padding: 1.375rem 1.875rem;
-        max-width: 19.6044rem;
+        max-width: 19.6875rem;
+        box-sizing: border-box;
     }
     main{
         display: block;
@@ -607,6 +736,7 @@ h4{
     .compdroitecont3{
         grid-column-start: 1;
         padding-top: 11%;
+        max-width: 313px;
         grid-template-areas: "i" 
                              "a"
                              "u" 
@@ -617,6 +747,9 @@ h4{
     .divdroitehautcont4, .divdroitemilieucont4,.divdroitebascont4{
        display: none;
 }
+    .divgauchecont4{
+        max-width: 242px;
+    }
     .comp1cont4{
         padding: 0;
         padding-top: 21.5%;
@@ -639,5 +772,39 @@ h4{
     }
     .container5{
         display: none;
+    }
+    .container6{
+        background-image: none;
+    }
+    .compprincipalcont6{
+        padding: 0;
+        grid-template-rows: auto;
+        align-items: start;
+        justify-content: start;
+    }
+    .comphautcont6{
+        align-items: start;
+    }
+    .compbasdroitecont6{
+        grid-column-start: 1;
+        grid-column-end: 1;
+        max-width: 13rem;
+    }
+    .compbasgauchecont6{
+        display: none;
+    }
+    .compbasdroitecont6 > .barre-orange{
+        display: none;
+    }
+    .container7{
+        background-image: none;
+    }
+    .divdroitecont7{
+        max-width: 313px;
+    }
+    .compcont7{
+        flex-wrap: wrap;
+        gap: 0;
+        padding: 0;
     }
 }

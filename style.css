@@ -838,6 +838,7 @@ h4{
         display: flex;
         align-items: center;
         justify-content: center;
+        max-width: 340px;
         padding: 0;
     }
     .div1top{
@@ -847,8 +848,9 @@ h4{
         display: none;
     }
     .div3cont1{
-        max-width: 100%;
+        width: 375px;
         margin: 0;
+        column-gap: 0;
         grid-template-areas: "sega ubisoft"
                              "microsoft electronic-arts"
                              "capcom bethesda";

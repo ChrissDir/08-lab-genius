@@ -53,7 +53,10 @@
     --color-orange :#F87F28;
     --color-full-white : #FFFFFF;
     --color-grey-dark : #BFBFBF;
+    --color-black-general: #202020;
     --color-black :#232323;
+    --color-form_border: #828282;
+    --color-menu: #888888;
     font-size: 100%;
 }
 *{
@@ -61,41 +64,44 @@
     padding: 0;
 }
 body{
+    margin-left: auto;
+    margin-right: auto;
     font-family: 'Inter', sans-serif;
     width: min(100vw, 1860px);
     height: 100%;
-    background-color: var(--color-black);
+    background-color: var(--color-black-general);
 }
 main{
     display: flex;
     width: min(100%, 1860px);
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
     height: 100%;
 }
 .page-container{
     width: 100%;
     height: 100%;
 }
-img{
+.div3cont1 > img{
     width: 100%;
     height: 100%;
 }
 .componentdebut{
     display: flex;
     padding-top: 1%;
+    padding-right: 60px;
+    justify-content: space-between;
 }
 .div1top{
     display: flex;
     justify-content: space-evenly;
     min-width: 50%;
 }
-.div2top{
+#burger_menu span{
     display: flex;
-    align-items: center;
-    padding-left: 45%;
-    max-width: 50%;
+    align-self: flex-end;
+    width: 35px;
+    height: 5px;
+    border-bottom: 0.125rem solid var(--color-menu);
+    margin-bottom: 0.3125rem;
 }
 #olivtop{
     display: flex;
@@ -154,6 +160,7 @@ ul{
     margin-bottom: 1.25rem;
 }
 h2{
+    display: inline-block;
     font-weight: 400;
     font-size: 4.5rem;
     line-height: 6.3125rem;
@@ -168,7 +175,7 @@ h4{
     text-transform: capitalize;
 }
 .olivier{
-    display: inline-block;
+    display: inline;
     font-weight: 700;
     font-size: 4.5rem;
     line-height: 6.3125rem;
@@ -181,6 +188,7 @@ h4{
     background-image: url(imgs/Grandes-images/background-cont1.webp);
     width: min(100%, 1860px);
     height: min(100%, 1087px);
+    background-color: var(--color-black);
 }
 .componentcont1{
     display: flex;
@@ -272,18 +280,20 @@ h4{
     line-height: 1.375rem;
     color: var(--color-full-white);
 }
+/* début cont3 */
 .container3{
     background-image: url(imgs/Grandes-images/background-cont3.webp);
     width: min(100%, 1860px);
     height: min(100%, 916px);
 }
-/* début cont3 */
 .comp1cont3{
     display: grid;
     align-items: start;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-areas: "portfolio compdroitecont3";
     min-height: 840px;
+    padding-bottom: 15.3125rem;
+    background-color: var(--color-black);
 }
 .portfolio{
     grid-column-start: 2;
@@ -318,7 +328,8 @@ h4{
 }
 /* début cont4 */
 .container4{
-    width: min(100%, 1860px);  
+    width: min(100%, 1860px);
+    background-color: var(--color-black);  
 }
 .comp1cont4{
     display: grid;
@@ -349,6 +360,7 @@ h4{
 .divgauchecont4 > a{
     margin-top: 10%;
     max-width: 12.125rem;
+    text-align: center;
 }
 .divgauchecont4{
     display: flex;
@@ -410,7 +422,8 @@ h4{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100%;  
+    height: 100%;
+    background-color: var(--color-black);  
 }
 .compprincipalecont5{
     display: grid;
@@ -541,6 +554,7 @@ h4{
 .container6{
     background-image: url(imgs/Grandes-images/background-cont6.webp);
     background-repeat: no-repeat;
+    background-size: cover;
 }
 .compprincipalcont6{
     display: grid;
@@ -599,6 +613,7 @@ h4{
     background-image: url(imgs/Grandes-images/background-cont7.webp);
     background-repeat: no-repeat;
     background-position-x: center;
+    background-color: var(--color-black);
 }
 .compcont7{
     display: flex;
@@ -643,12 +658,145 @@ h4{
 .container8{
     background-image: url(imgs/Grandes-images/background-cont8.webp);
     background-repeat: no-repeat;
-    background-position-x: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#contact_component{
+    width: 1100px;
+    padding-top: 11.875rem;
+    padding-bottom: 11.875rem;
+    display: flex;
+    gap: 10rem;
+}
+#contact_div h3{
+    margin-top: 1.875rem;
+    margin-bottom: 1.875rem;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 60px;
+    text-transform: capitalize;
+    color: var(--color-grey-dark);
+}
+#contact_div h3 + div {
+    display: grid;
+    grid-template-columns: 4.125rem 1fr;
+}
+#contact_div h3 + div p{
+    margin-bottom: 3.4375rem;
+}
+.txt_orange{
+    color: var(--color-orange);
+}
+#contact_div h3 + div p,
+#contact_div h3 + div p span + span{
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    color: var(--color-full-white);
+    display: flex;
+    flex-direction: column;
+}
+#contact_div h3 + div p span{
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+    letter-spacing: -0.01rem;
+    font-weight: 500;
+}
+#form_div p:nth-child(2){
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 500;
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+#form_div p:nth-child(2) span{
+    display: flex;
+    flex-direction: column;
+}
+#form_div p:nth-child(3){
+    padding-bottom: 1.125rem;
+    padding-right: 1.25rem;
+    box-sizing: border-box;
+}
+#form_div form{
+    display: grid;
+    grid-template-columns: 10.3125rem 3.4375rem 15.9375rem;
+    grid-template-rows: 4.375rem 10.625rem 2.9375rem;
+    gap: 2.1875rem;
+ 
+}
+#form_div form div:first-child{
+    grid-column: 1 / 3;
+}
+#form_div form :nth-child(3){
+    grid-column: 1 / 4;
+    margin-bottom: 1.25rem;
+}
+#form_div form :last-child {
+    text-align: center;
+}
+.contactez-moi{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: .75rem;
+    line-height: 1.0625rem;
+    letter-spacing: .125rem;
+    text-transform: uppercase;
+    color: var(--color-full-white);
+}
+.contact-info{
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    color: var(--color-full-white);
+}
+#form_div form label{
+    font-family: 'Roboto', sans-serif; 
+    font-size: 0.875rem;
+    color: var(--color-full-white);
+    background-color: var(--color-black);
+    padding-left: 0.3125rem;
+    padding-right: 0.3125rem;
+    margin-left: 0.625rem;
+    position: relative;
+}
+#form_div form input{
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 400;
+    color: var(--color-full-white);
+    background-color: var(--color-black-general);
+    outline: 0.0625rem solid var(--color-form_border);
+    border-radius: 0.625rem;
+    padding: 0.625rem 1.25rem;
+    box-sizing: border-box;
+    margin-top: -0.625rem;
+    width: 100%;
+    height: 90%;
+    z-index: -1;
+}
+#form_div form textarea{
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 400;
+    color: var(--color-full-white);
+    outline: 0.0625rem solid var(--color-form_border);
+    border-radius: 0.625rem;
+    background-color: var(--color-black-general);
+    padding: 0.625rem 1.25rem;
+    box-sizing: border-box;
+    margin-top: -0.625rem;
+    width: 100%;
+    height: 90%;
+    z-index: -1;
+    resize: none;
 }
 @media screen and (max-width: 375px) {
     .page-container{
         padding: 1.375rem 1.875rem;
-        max-width: 19.6875rem;
         box-sizing: border-box;
     }
     main{
@@ -656,6 +804,7 @@ h4{
     }
     .container1{
         background-image: none;
+        background-color: var(--color-black-general);
     }
     .paratop{
         display: none;
@@ -671,8 +820,16 @@ h4{
     line-height: 6.3125rem;
     letter-spacing: -0.1875rem;
     }
-    .divcomponentdebut{
+    .componentdebut{
         padding: 0;
+    }
+    #burger_menu {
+        background-color: var(--color-orange);
+        padding: 0.625rem;
+        border-radius: 3.125rem;
+    }
+    #burger_menu span {
+        border-bottom-color: var(--color-full-white);
     }
     #clients{
         margin-bottom: 1.375rem;
@@ -690,8 +847,8 @@ h4{
         display: none;
     }
     .div3cont1{
-        width: 100%;
-        margin-bottom: 0;
+        max-width: 100%;
+        margin: 0;
         grid-template-areas: "sega ubisoft"
                              "microsoft electronic-arts"
                              "capcom bethesda";
@@ -724,11 +881,14 @@ h4{
     }
     .container3{
         background-image: none;
+        background-color: var(--color-black-general);
     }
     .comp1cont3{
         grid-template-columns: 1fr;
         grid-template-areas: "portfolio" 
                              "compdroitecont3";
+        background-color: var(--color-black-general);
+        padding-bottom: 0;
     }
     .portfolio{
         grid-column-start: 1;
@@ -743,6 +903,9 @@ h4{
                              "k"
                              "c"
                              "b"; 
+    }
+    .container4{
+        background-color: var(--color-black-general);
     }
     .divdroitehautcont4, .divdroitemilieucont4,.divdroitebascont4{
        display: none;
@@ -761,8 +924,8 @@ h4{
                         "dmbc";
     }
     img{
-        max-width: 19.6044rem;
-        max-height: 16.5rem;
+        max-width: 313px;
+        max-height: 100%;
     }
     .divmilieuhautcont4, .divmilieucont4, .divmilieubascont4{
         border-bottom: 0;
@@ -772,9 +935,11 @@ h4{
     }
     .container5{
         display: none;
+        background-color: var(--color-black-general);
     }
     .container6{
         background-image: none;
+        background-color: var(--color-black-general);
     }
     .compprincipalcont6{
         padding: 0;
@@ -804,7 +969,53 @@ h4{
     }
     .compcont7{
         flex-wrap: wrap;
+        background-color: var(--color-black-general);
         gap: 0;
         padding: 0;
+    }
+    .container8{
+        background-image: none;
+    }
+    #contact_component{
+        width: 320px;
+        display: flex;
+        flex-direction: column;
+        padding-top: 3.75rem;
+        padding-bottom: 0;
+        gap: 1.875rem;
+    }
+    #form_div p:nth-child(2){
+        margin-top: 1.375rem;
+        margin-bottom: 2.125rem;
+    }
+    #contact_div h3{
+        margin-top: 0;
+        margin-bottom: 2.5rem;
+    }  
+    #contact_div h3 + div p{
+        margin-bottom: 1.625rem;
+    } 
+    #contact_div h3 + div p,
+    #contact_div h3 + div p span + span{
+        font-size: 1rem;
+    } 
+    #form_div form{
+        display: flex;
+        flex-direction: column;
+        gap: 1.5625rem;
+    }
+    #form_div form :nth-child(3){
+        margin-bottom: 0;
+    }
+    #form_div :nth-child(4) div input{
+        height: 60px;
+        width: 100%;
+    }
+    #form_div form textarea{
+        height: 167px;
+        width: 100%;
+    } 
+    #form_div form :nth-child(4) {
+        width: 165px;
     }
 }

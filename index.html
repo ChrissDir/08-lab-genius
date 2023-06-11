@@ -1,17 +1,26 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="zxx">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preload" href="style.css" as="style" onload="this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="style.css" type="text/css" media="all"></noscript>
+    <meta name="description" content="Exercice projet08">
+    <link rel="preload" as="font" href="font/Inter-Bold.woff2" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" as="font" href="font/Inter-Medium.woff2" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" as="font" href="font/Inter-Regular.woff2" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" as="font" href="font/Inter-SemiBold.woff2" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" as="font" href="font/Roboto-Black.woff2" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" as="font" href="font/Roboto-Regular.woff2" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" as="image" href="imgs/Grandes-images/background-cont1.webp"> 
+    <link rel="preload" as="image" href="imgs/Grandes-images/background-cont2.webp">
+    <link rel="preload" as="image" href="imgs/Grandes-images/background-cont3.webp">
+    <link rel="preload" as="image" href="imgs/Grandes-images/background-cont6.webp">
+    <link rel="preload" as="image" href="imgs/Grandes-images/background-cont7.webp">
+    <link rel="preload" as="image" href="imgs/Grandes-images/background-cont8.webp">
+
     <title>08-lab-genius</title>
-    <link rel="preload" as="font" href="/font/Inter-Bold.woff2" type="font/woff2" crossorigin="anonymous">
-        <link rel="preload" as="font" href="/font/Inter-Medium.woff2" type="font/woff2" crossorigin="anonymous">
-        <link rel="preload" as="font" href="/font/Inter-Regular.woff2" type="font/woff2" crossorigin="anonymous">
-        <link rel="preload" as="font" href="/font/Inter-SemiBold.woff2" type="font/woff2" crossorigin="anonymous">
-        <link rel="preload" as="font" href="/font/Roboto-Black.woff2" type="font/woff2" crossorigin="anonymous">
-        <link rel="preload" as="font" href="/font/Roboto-Regular.woff2" type="font/woff2" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">  
     <body>
         <main>
             <div class="page-container">
@@ -33,13 +42,10 @@
                                         fill="white" />
                                 </svg>&nbsp; olivier.depiesse@gmail.com</p>
                         </div>
-                        <div class="div2top">
-                            <p><svg width="24" height="20" viewBox="0 0 24 20" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <line y1="0" x2="24" y2="0" stroke="#888888" />
-                                    <line y1="10" x2="24" y2="10" stroke="#888888" />
-                                    <line y1="20" x2="24" y2="20" stroke="#888888" />
-                                </svg></p>
+                        <div id="burger_menu"> <!-- burger menu -->
+                            <span></span>
+                            <span></span>
+                            <span></span>
                         </div>
                     </div>
                     <div class="componentcont1">
@@ -50,7 +56,7 @@
                             <p id="texte-div1-cont1">Développement : Environnement LAMP, Zend Framework, ExtJS, Webservices,
                                 AMFPHP, API Google Maps, Facebook Open Graph, API Twitter</p>
                             <p id="poste-div1-cont1">Directeur technique Webedia Madrid</p>
-                            <a href="">Portfolio</a><a href="">Contact</a>
+                            <a href="https://www.youtube.com/">Portfolio</a><a href="https://www.twitch.tv/">Contact</a>
                         </div>
                         <div class="div2cont1">
                             <p><img src="imgs/Grandes-images/photo-olivier-min.webp" width="765" height="526"
@@ -73,7 +79,7 @@
                         <p id="capcom"><img src="imgs/Logos/Logos-cont1/logo-capcom.svg"
                                 alt="logo capcom, nom de l'entreprise en jaune entouré de bleu autour des lettres"
                                 width="131" height="24"></p>
-                        <p id="bethesda"><img src="imgs/Logos/Logos-cont1/logo-bethesda.svg"
+                        <p id="bethesda"><img src="/imgs/Logos/Logos-cont1/logo-bethesda.webp"
                                 alt="logo bethesda, nom de l'entreprise à droite d'un petit carré blanc en haut de la première lettre à gauche"
                                 width="158" height="23"></p>
                     </div>
@@ -192,7 +198,7 @@
                         <h3 class="titresh3">Expérience</h3>
                         <div class="barre-orange"></div>
                         <p class="stylepara">Necessitatibus eius consequatur ex aliquid fuga eum quidem, It doesn’t matter how great your product or service is if your copy does not captivate your audience.</p>
-                        <a>Download Resume</a>
+                        <a href="https://fr-fr.facebook.com/">Download Resume</a>
                         </div>
                         <div class="divmilieuhautcont4">
                             <div class="ed">
@@ -314,8 +320,59 @@
                 </div>
                 <!--Page 8-->
                 <div class="container8">
-                    
-                </div>
+                    <div id="contact_component">
+                        <div id="contact_div"> <!--adresse, mail, tel-->
+                            <h3>Contact</h3>
+                            <div>
+                                <p>
+                                    <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0 21C0 9.40202 9.40202 0 21 0H30C36.6274 0 42 5.37258 42 12V21C42 32.598 32.598 42 21 42C9.40202 42 0 32.598 0 21Z" fill="#F87F28"/>
+                                        <path d="M26.728 23.7279L21.4558 29L16.1837 23.7279C15.141 22.6852 14.4309 21.3567 14.1433 19.9104C13.8556 18.4641 14.0032 16.965 14.5676 15.6026C15.1319 14.2402 16.0875 13.0758 17.3136 12.2565C18.5397 11.4373 19.9812 11 21.4558 11C22.9305 11 24.372 11.4373 25.5981 12.2565C26.8242 13.0758 27.7798 14.2402 28.3441 15.6026C28.9085 16.965 29.0561 18.4641 28.7684 19.9104C28.4808 21.3567 27.7707 22.6852 26.728 23.7279ZM21.4558 20.1126C21.8953 20.1126 22.3167 19.9381 22.6274 19.6274C22.9381 19.3166 23.1127 18.8952 23.1127 18.4558C23.1127 18.0164 22.9381 17.5949 22.6274 17.2842C22.3167 16.9735 21.8953 16.7989 21.4558 16.7989C21.0164 16.7989 20.595 16.9735 20.2843 17.2842C19.9736 17.5949 19.799 18.0164 19.799 18.4558C19.799 18.8952 19.9736 19.3166 20.2843 19.6274C20.595 19.9381 21.0164 20.1126 21.4558 20.1126Z" fill="#F7FBFE"/>
+                                        </svg>                                        
+                                </p>
+                                <p><span class="txt_orange">Adresse</span>36 rue des Peupliers<span>Paris (75018) France
+                                    </span>
+                                </p>
+                                <p>
+                                    <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0 21C0 9.40202 9.40202 0 21 0H30C36.6274 0 42 5.37258 42 12V21C42 32.598 32.598 42 21 42C9.40202 42 0 32.598 0 21Z" fill="#F87F28"/>
+                                        <path d="M26.7479 17.1306C27.5596 17.5259 28.4788 17.643 29.3636 17.4636V26.5455C29.3636 26.7625 29.2774 26.9706 29.124 27.124C28.9706 27.2774 28.7625 27.3636 28.5455 27.3636H13.8182C13.6012 27.3636 13.3931 27.2774 13.2396 27.124C13.0862 26.9706 13 26.7625 13 26.5455V13.4545C13 13.2376 13.0862 13.0294 13.2396 12.876C13.3931 12.7226 13.6012 12.6364 13.8182 12.6364H24.5364C24.4824 12.9006 24.4545 13.1747 24.4545 13.4545C24.4532 14.4266 24.7994 15.3671 25.4306 16.1063L21.2317 19.7406L15.9839 15.2856L14.9252 16.5325L21.2415 21.8957L26.7479 17.1306ZM28.5455 15.9091C28.2231 15.9091 27.9039 15.8456 27.6061 15.7222C27.3083 15.5989 27.0378 15.4181 26.8098 15.1902C26.5819 14.9622 26.4011 14.6917 26.2778 14.3939C26.1544 14.0961 26.0909 13.7769 26.0909 13.4545C26.0909 13.1322 26.1544 12.813 26.2778 12.5152C26.4011 12.2174 26.5819 11.9468 26.8098 11.7189C27.0378 11.491 27.3083 11.3102 27.6061 11.1868C27.9039 11.0635 28.2231 11 28.5455 11C29.1964 11 29.8208 11.2586 30.2811 11.7189C30.7414 12.1792 31 12.8036 31 13.4545C31 14.1055 30.7414 14.7299 30.2811 15.1902C29.8208 15.6505 29.1964 15.9091 28.5455 15.9091Z" fill="white"/>
+                                        </svg>
+                                </p>
+                                <p><span class="txt_orange">Mail</span>olivier.depiesse@gmail.com</p>
+                                <p>
+                                    <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0 21C0 9.40202 9.40202 0 21 0H30C36.6274 0 42 5.37258 42 12V21C42 32.598 32.598 42 21 42C9.40202 42 0 32.598 0 21Z" fill="#F87F28"/>
+                                        <path d="M30 25.42V28.956C30.0001 29.2092 29.9042 29.453 29.7316 29.6382C29.559 29.8234 29.3226 29.9363 29.07 29.954C28.633 29.984 28.276 30 28 30C19.163 30 12 22.837 12 14C12 13.724 12.015 13.367 12.046 12.93C12.0637 12.6774 12.1766 12.441 12.3618 12.2684C12.547 12.0958 12.7908 11.9999 13.044 12H16.58C16.704 11.9999 16.8237 12.0459 16.9157 12.129C17.0078 12.2122 17.0656 12.3266 17.078 12.45C17.101 12.68 17.122 12.863 17.142 13.002C17.3407 14.3889 17.748 15.7378 18.35 17.003C18.445 17.203 18.383 17.442 18.203 17.57L16.045 19.112C17.3645 22.1865 19.8145 24.6365 22.889 25.956L24.429 23.802C24.4919 23.714 24.5838 23.6509 24.6885 23.6237C24.7932 23.5964 24.9042 23.6068 25.002 23.653C26.267 24.2539 27.6156 24.6601 29.002 24.858C29.141 24.878 29.324 24.9 29.552 24.922C29.6752 24.9346 29.7894 24.9926 29.8724 25.0846C29.9553 25.1766 30.0012 25.2961 30.001 25.42H30Z" fill="white"/>
+                                        </svg>
+                                </p>
+                                <p><span class="txt_orange">Téléphone</span>06 54 84 54 75</p>
+                            </div>
+                        </div> <!--END contact_div-->
+                        <div id="form_div"> <!--txt + form -->
+                            <p class="contactez-moi">contactez moi</p>
+                            <p class="contact-info"><span>Utilisez le formulaire</span>ci-dessous pour me contacter</p>
+                            <p class="stylepara">
+                                Cras fermentum odio eu feugiat. Justo eget magna fermentum iaculis eu non diam phasellus. Scelerisque felis imperdiet proin fermentum leo. Amet volutpat consequat mauris nunc congue..
+                            </p>
+                            <form action="random.php" method="post" lang="fr">
+                                <div>
+                                    <label for="nom">Votre nom :</label>
+                                    <input type="text" name="nom" id="nom" maxlength="100">
+                                </div>
+                                <div>
+                                    <label for="mail">Votre email :</label>
+                                    <input type="email" name="mail" id="mail" required>
+                                </div>
+                                <div>
+                                    <label for="message">Message :</label>
+                                    <textarea name="message" id="message" required></textarea>
+                                </div>
+                                <a href="mailto:giouezhtreuhjtrh@rtheorejyo.net">Envoyer</a>
+                            </form>
+                        </div> 
+                    </div> 
+                </div> 
             </div>
         </main>
     </body>

@@ -295,8 +295,7 @@ h4{
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-areas: "portfolio compdroitecont3";
     min-height: 840px;
-    padding-bottom: 15.3125rem;
-    background-color: var(--color-black);
+    padding-bottom: 6.25rem;
 }
 .portfolio{
     grid-column-start: 2;

@@ -132,21 +132,24 @@ h1{
 }
 a{
     text-decoration: none;
-    font-family: 'Roboto';
+    font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: .875rem;
     line-height: 1.5rem;
     padding: .75rem 2rem;
-    color: var(--color-orange);
-    border: .125rem solid var(--color-orange);
+    color: var(--color-full-white);
+    background: var(--color-red);
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
+    border: .125rem solid var(--color-red);
     border-radius: 3.125rem;
     box-sizing: border-box;
     margin-right: 4%;
 }
-a:hover{
-    color: var(--color-full-white);
-    background: var(--color-red);
-    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
+#boutoncont1{
+    background-color: transparent;
+    box-shadow: none;
+    color: var(--color-orange);
+    border: .125rem solid var(--color-orange);
 }
 ul{
     list-style: none;
@@ -398,6 +401,14 @@ h4{
     grid-area: dmbc;
     box-sizing: border-box;
     border-bottom: 1px solid rgba(173, 181, 189, 0.16);
+}
+#bouton-experience-gauche{
+    display: flex;
+}
+#bouton-experience{
+    display: none;
+    margin: 0;
+    text-align: center;
 }
 .divdroitehautcont4{
     display: flex;
@@ -801,15 +812,19 @@ h4{
     z-index: -1;
     resize: none;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 412px) {
     main{
-    max-width: 375px;
-    margin: auto auto;
+    width: 100vw;
+    height: auto;
+    margin: 1.125rem 1.375rem 2.5rem 1.4875rem;
 }
     .page-container{
-
+        width: 100%;
     }
     .container1{
+        display: flex;
+        flex-direction: column;
+        max-width: 330px;
         background-image: none;
         background-color: var(--color-black-general);
     }
@@ -823,12 +838,13 @@ h4{
         width: 304px;
         padding-top: 10%;
     }
-    .componentcont1 > h2{
+    h2{
     font-size: 2.5rem;
     line-height: 6.3125rem;
     letter-spacing: -0.1875rem;
     }
     .componentdebut{
+        max-width: 323px;
         padding: 0;
     }
     #burger_menu {
@@ -858,18 +874,15 @@ h4{
     #poste-div1-cont1{
         width: 303px;
     }
-    .container1 > h2{
+    h2{
         max-width: 329px;
     }
     .div2cont1{
         display: none;
     }
     .div3cont1{
-        width: 315px;
         display: flex;
         flex-wrap: wrap;
-        justify-content: start;
-        align-items: start;
         gap: 0;
         margin: auto auto;
     }
@@ -880,13 +893,12 @@ h4{
         padding-left: 3.9375rem;
     }
     #electronic-arts{
-        padding-left: .1875rem;
+        padding-left: 1.5rem;
     }
     #bethesda{
         padding-left: 1.4063rem;
     }
     #texte-div1-cont1{
-        max-width: 100vw;
         padding-right: 0;
     }
     .componentdebut{
@@ -901,6 +913,7 @@ h4{
     }
     .compcont2{
         gap: 38px;
+        max-width: 301px;
         padding-top: 2.5375rem;
         padding-bottom: 3.0625rem;
         align-items: start;
@@ -911,6 +924,7 @@ h4{
         justify-content: start;
         align-items: start;
         padding: 0;
+        margin: 0;
     }
     .container3{
         background-image: none;
@@ -924,6 +938,7 @@ h4{
         padding-bottom: 0;
     }
     .portfolio{
+        max-width: 296px;
         grid-column-start: 1;
     }
     .compdroitecont3{
@@ -950,9 +965,14 @@ h4{
        display: none;
 }
     .divgauchecont4{
-        display: flex;
-        align-items: start;
         max-width: 242px;
+    }
+    #bouton-experience-gauche{
+        display: none;
+    }
+    #bouton-experience{
+        display: flex;
+        margin-top: 2.9375rem;
     }
     .comp1cont4{
         display: flex;
@@ -1006,8 +1026,7 @@ h4{
         align-items: start;
     }
     .compbasdroitecont6{
-        padding-right: 25%;
-        max-width: 13rem;
+        max-width: 299px;
     }
     .compbasgauchecont6{
         display: none;

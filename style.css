@@ -91,9 +91,13 @@ main{
     justify-content: space-evenly;
     min-width: 50%;
 }
+#burger_menu{
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+}
 #burger_menu span{
     display: flex;
-    align-self: flex-end;
     width: 35px;
     height: 5px;
     border-bottom: 0.125rem solid var(--color-menu);
@@ -342,6 +346,8 @@ h4{
                         "dgc dmbc ddbc";
 }
 .styleparamilieucont4{
+    display: flex;
+    align-items: center;
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
     font-size: .75rem;
@@ -796,15 +802,15 @@ h4{
     resize: none;
 }
 @media screen and (max-width: 375px) {
-    .page-container{
-        margin: auto auto;
-        box-sizing: border-box;
-    }
     main{
-        display: block;
+    max-width: 375px;
+    margin: auto auto;
+}
+    .page-container{
+
     }
     .container1{
-        background-image: hidden;
+        background-image: none;
         background-color: var(--color-black-general);
     }
     .paratop{
@@ -814,9 +820,10 @@ h4{
        text-align: start; 
     }
     h1{
+        width: 304px;
         padding-top: 10%;
     }
-    h2{
+    .componentcont1 > h2{
     font-size: 2.5rem;
     line-height: 6.3125rem;
     letter-spacing: -0.1875rem;
@@ -845,22 +852,38 @@ h4{
     .div1top{
         justify-content: left;
     }
+    #texte-div1-cont1{
+        width: 20.125rem;
+    }
+    #poste-div1-cont1{
+        width: 303px;
+    }
+    .container1 > h2{
+        max-width: 329px;
+    }
     .div2cont1{
         display: none;
     }
     .div3cont1{
+        width: 315px;
         display: flex;
-        width: 375px;
         flex-wrap: wrap;
-        justify-content: space-evenly;
-        align-items: center;
+        justify-content: start;
+        align-items: start;
         gap: 0;
-        margin: 0;
-
+        margin: auto auto;
     }
-    .div3cont1 > img{
-        max-width: 100px !important;
-        max-height: auto;
+    #sega{
+        padding-left: 1.125rem;
+    }
+    #ubisoft{
+        padding-left: 3.9375rem;
+    }
+    #electronic-arts{
+        padding-left: .1875rem;
+    }
+    #bethesda{
+        padding-left: 1.4063rem;
     }
     #texte-div1-cont1{
         max-width: 100vw;
@@ -885,6 +908,7 @@ h4{
     }
     .div1cont2{
         text-align: start;
+        justify-content: start;
         align-items: start;
         padding: 0;
     }
@@ -913,6 +937,12 @@ h4{
                              "c"
                              "b"; 
     }
+    .astronaute{
+        max-height: 172px;
+    }
+    .bureau{
+        width: 313px;
+    }
     .container4{
         background-color: var(--color-black-general);
     }
@@ -920,9 +950,14 @@ h4{
        display: none;
 }
     .divgauchecont4{
+        display: flex;
+        align-items: start;
         max-width: 242px;
     }
     .comp1cont4{
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
         padding: 0;
         padding-top: 21.5%;
         gap: 3.125rem;
@@ -935,6 +970,15 @@ h4{
     img{
         max-width: 313px;
         max-height: 100%;
+    }
+    .divmilieuhautcont4{
+        padding-right: 45%;
+    }
+    .divmilieucont4{
+        padding-right: 27%;
+    }
+    .divmilieubascont4{
+        padding-right: 30%;
     }
     .divmilieuhautcont4, .divmilieucont4, .divmilieubascont4{
         border-bottom: 0;
@@ -952,16 +996,17 @@ h4{
     }
     .compprincipalcont6{
         padding: 0;
-        grid-template-rows: auto;
-        align-items: start;
+        display: flex;
         justify-content: start;
+        align-items: start;
+        flex-direction: column;
     }
     .comphautcont6{
+        padding-right: 20%;
         align-items: start;
     }
     .compbasdroitecont6{
-        grid-column-start: 1;
-        grid-column-end: 1;
+        padding-right: 25%;
         max-width: 13rem;
     }
     .compbasgauchecont6{
@@ -975,21 +1020,24 @@ h4{
     }
     .divgauchecont7{
         padding: 0;
-        max-width: 313px;
+        padding-right: 36.5%;
+    
     }
     .divdroitecont7{
         max-width: 313px;
     }
     .compcont7{
+        display: flex;
+        justify-content: start;
         flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
+        align-items: start;
         background-color: var(--color-black-general);
         gap: 0;
         padding: 0;
     }
     .container8{
         background-image: none;
+        justify-content: start;
     }
     #contact_component{
         width: 320px;

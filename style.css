@@ -168,7 +168,6 @@ h2{
     font-size: 4.5rem;
     line-height: 6.3125rem;
     letter-spacing: -0.1875rem;
-    text-transform: capitalize;
     color: var(--color-full-white);
 }
 h4{
@@ -819,13 +818,13 @@ h4{
     margin: 1.125rem 1.375rem 2.5rem 1.4875rem;
 }
     .page-container{
-        width: 100%;
+        width: 375px;
     }
     .container1{
         display: flex;
         flex-direction: column;
         max-width: 330px;
-        background-image: none;
+        background-image: url(imgs/Grandes-images/background-mobile.webp);
         background-color: var(--color-black-general);
     }
     .paratop{
@@ -881,9 +880,7 @@ h4{
         display: none;
     }
     .div3cont1{
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0;
+        content: url(imgs/Logos/Logos-cont1/icones-mobile.webp);
         margin: auto auto;
     }
     #sega{
@@ -919,10 +916,20 @@ h4{
         align-items: start;
         flex-direction: column;
     }
+    .technique{
+        margin: 0;
+    }
+    .gestion-de-projet{
+        margin: 0;
+    }
+    .management{
+        margin: 0;
+    }
     .div1cont2{
         text-align: start;
         justify-content: start;
         align-items: start;
+        max-width: 325px;
         padding: 0;
         margin: 0;
     }
@@ -953,17 +960,29 @@ h4{
                              "b"; 
     }
     .astronaute{
-        max-height: 172px;
+        content: url(imgs/Grandes-images/astronaute-mobile.webp);
     }
     .bureau{
-        width: 313px;
+        content: url(imgs/Grandes-images/bureau-mobile.webp);
+    }
+    .peinture{
+        content: url(imgs/Grandes-images/peinture-mobile.webp);
+    }
+    .boite-eau{
+        content: url(imgs/Grandes-images/eau-mobile.webp);
+    }
+    .mae{
+        content: url(imgs/Grandes-images/machine-a-écrire-mobile.webp);
+    }
+    .orange-bleue{
+        content: url(imgs/Grandes-images/orange-bleue-mobile.webp);
     }
     .container4{
         background-color: var(--color-black-general);
     }
     .divdroitehautcont4, .divdroitemilieucont4,.divdroitebascont4{
        display: none;
-}
+    }
     .divgauchecont4{
         max-width: 242px;
     }
@@ -1020,13 +1039,14 @@ h4{
         justify-content: start;
         align-items: start;
         flex-direction: column;
+        padding-top: 4.4375rem;
     }
     .comphautcont6{
-        padding-right: 20%;
         align-items: start;
     }
     .compbasdroitecont6{
         max-width: 299px;
+        padding-bottom: 5.125rem;
     }
     .compbasgauchecont6{
         display: none;

@@ -811,7 +811,7 @@ h4{
 @media screen and (max-width: 412px) {
     main{
         width: 100vw;
-        height: 100vh;
+        height: auto;
         margin: 1.125rem 0rem 2.5rem 1.4875rem;
     }
     .page-container{

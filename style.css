@@ -67,14 +67,14 @@ body{
     margin: auto auto;
     font-family: 'Inter', sans-serif;
     width: min(100vw, 1860px);
-    height: 100%;
+    height: auto;
     background-color: var(--color-black-general);
 }
 main{
     display: flex;
     margin: auto auto;
     width: min(100%, 1860px);
-    height: 100%;
+    height: auto;
 }
 .page-container{
     width: 100%;
@@ -809,10 +809,12 @@ h4{
     resize: none;
 }
 @media screen and (max-width: 412px) {
+    body{
+        padding: 1.125rem 0rem 2.5rem 1.4875rem;
+    }
     main{
-        width: 100vw;
+        width: 100%;
         height: auto;
-        margin: 1.125rem 0rem 2.5rem 1.4875rem;
     }
     .page-container{
         width: 100%;
